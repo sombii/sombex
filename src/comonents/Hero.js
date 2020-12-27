@@ -23,16 +23,27 @@ const HeroWrapper = styled.div`
   align-items: center;
   max-width: 900px;
   margin: auto;
+
+  @media (max-width: 850px) {
+    flex-direction: column-reverse;
+  }
 `
 
 const Type = styled.div`
   margin-right: 1.5rem;
+  
+  @media (max-width: 850px) {
+    margin-right: 0;
+    h1 {
+      font-size: 1.6rem;
+    }
+  }
 `
 
 const H1 = styled.h1`
   color: white;
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2.8rem;
+  line-height: 2.7rem;
   letter-spacing: -2px;
   font-weight: bold;
 `;
