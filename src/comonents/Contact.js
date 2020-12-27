@@ -42,6 +42,7 @@ const Container = styled("div")`
 
   @media (max-width: 700px) {
     flex-direction: column-reverse;
+    margin-top: 2rem;
     
     & div {
       width: 100%;
