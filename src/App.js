@@ -6,7 +6,7 @@ import Hero from "./comonents/Hero";
 import Bars from "./comonents/Bars";
 import {Switch, Route, useLocation} from "react-router-dom";
 import Contact from "./comonents/Contact";
-import {AnimatePresence, motion} from "framer-motion";
+import {AnimatePresence} from "framer-motion";
 
 function App() {
 
