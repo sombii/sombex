@@ -11,7 +11,7 @@ const Header = () => {
                 </Link>
             </div>
             <nav>
-                <NavItem to="://blog.sombex.com" target="_blank">blog</NavItem>
+                <NavItem to="//blog.sombex.com" target="_blank">blog</NavItem>
                 <NavItem activeClassName="active" to="/contact">contact</NavItem>
             </nav>
         </HeaderContainer>

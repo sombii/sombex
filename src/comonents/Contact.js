@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {Helmet} from "react-helmet";
 
 const Contact = () => {
 
@@ -9,6 +10,10 @@ const Contact = () => {
 
     return (
         <Container>
+            <Helmet>
+                <title>Contact Us</title>
+                <link rel="canonical" href="https://www.sombex.com/contact"/>
+            </Helmet>
             <TypeContainer>
                 <H3>Hit us with any kinds of query or suggestions using the form.</H3>
                 <p>Alternatively you can send us email directly at below addresses.</p>

@@ -11,7 +11,7 @@ const Hero = () => {
                     passion and for fun.
                 </Para>
                 <CtaBtn to="/contact">CONTACT</CtaBtn>
-                <SecBtn href="/contact">BLOG<OutIcon src="assets/img/out.svg"/> </SecBtn>
+                <SecBtn href="//blog.sombex.com" target="_blank">BLOG<OutIcon src="assets/img/out.svg"/> </SecBtn>
             </Type>
             <HeroImg src="assets/img/hero.svg"/>
         </HeroWrapper>
