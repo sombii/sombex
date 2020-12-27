@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import {motion} from "framer-motion";
 
 const Bars = () => {
     return (
@@ -12,12 +12,6 @@ const Bars = () => {
     )
 }
 
-// const Bar = () => {
-//     return (
-//         <SingleBar/>
-//     )
-// }
-
 const BarsContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -28,7 +22,7 @@ const BarsContainer = styled.div`
   width: 100%;
 `
 
-const Bar = styled.div`
+const Bar = styled("div")`
   min-width: 15rem;
   width: 40%;
   height: 0;

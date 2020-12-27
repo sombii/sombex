@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Helmet} from "react-helmet";
+import {motion} from "framer-motion";
 
 const Contact = () => {
 
@@ -9,7 +10,12 @@ const Contact = () => {
     }
 
     return (
-        <Container>
+        <Container
+            animate={{opacity: 1, scale: 1}}
+            initial={{opacity: 0, scale: 0.9}}
+            transition={{duration: 0.5}}
+            exit={{x: "-50vw", opacity: 0, transition: "easeInOut"}}
+        >
             <Helmet>
                 <title>Contact Us</title>
                 <link rel="canonical" href="https://www.sombex.com/contact"/>
@@ -24,9 +30,9 @@ const Contact = () => {
                 <H1>Let's Talk.</H1>
                 <form onSubmit={submitHandler}>
                     <Label for="_name">Name</Label>
-                    <Input type="text" id="_name" required placeholder="Your full name"/>
+                    <Input type="text" id="_name" required/>
                     <Label for="_email">Email</Label>
-                    <Input type="email" id="_email" required placeholder="Your email"/>
+                    <Input type="email" id="_email" required/>
                     <Label for="_message">Message</Label>
                     <Textarea id="_message" rows='3' required placeholder="Sending message is currently disabled."/>
                     <Button type="submit">SEND</Button>
@@ -36,7 +42,7 @@ const Contact = () => {
     )
 }
 
-const Container = styled("div")`
+const Container = styled(motion.div)`
   max-width: 900px;
   padding: 2rem 4rem;
   border: 1px solid #707070;

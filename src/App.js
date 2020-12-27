@@ -4,16 +4,20 @@ import styled from "styled-components";
 import Header from "./comonents/Header";
 import Hero from "./comonents/Hero";
 import Bars from "./comonents/Bars";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {Switch, Route, useLocation} from "react-router-dom";
 import Contact from "./comonents/Contact";
+import {AnimatePresence, motion} from "framer-motion";
 
 function App() {
+
+    const location = useLocation()
+
     return (
-        <Router>
-            <div className="App">
-                <StyledContainer>
-                    <Header/>
-                    <Switch>
+        <div className="App">
+            <StyledContainer>
+                <Header/>
+                <AnimatePresence exitBeforeEnter>
+                    <Switch location={location} key={location.key}>
                         <Route path="/" exact>
                             <Hero/>
                         </Route>
@@ -24,10 +28,10 @@ function App() {
                             <NotFound/>
                         </Route>
                     </Switch>
-                    <Bars/>
-                </StyledContainer>
-            </div>
-        </Router>
+                </AnimatePresence>
+                <Bars/>
+            </StyledContainer>
+        </div>
     );
 }
 

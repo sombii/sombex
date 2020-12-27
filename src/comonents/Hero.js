@@ -1,10 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import {motion} from "framer-motion";
+import {Helmet} from "react-helmet";
 
 const Hero = () => {
     return (
-        <HeroWrapper>
+        <HeroWrapper
+            animate={{opacity: 1, scale: 1}}
+            initial={{opacity: 0, scale: 0.9}}
+            transition={{duration: 0.5}}
+            exit={{x: "-50vw", opacity: 0, transition: "easeInOut"}}
+        >
+            <Helmet>
+                <title>Home - We build apps for fun.</title>
+                <link rel="canonical" href="https://www.sombex.com/contact"/>
+            </Helmet>
             <Type>
                 <H1> We Build Things That Looks Good & Are Easy To Use. </H1>
                 <Para>New to market but full of positivity and creative attitude. We design and develop web apps with
@@ -18,7 +29,7 @@ const Hero = () => {
     )
 }
 
-const HeroWrapper = styled.div`
+const HeroWrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,8 +39,8 @@ const HeroWrapper = styled.div`
   @media (max-width: 850px) {
     flex-direction: column-reverse;
     text-align: center;
-    
-    img{
+
+    img {
       margin: 0;
     }
   }
@@ -37,13 +48,14 @@ const HeroWrapper = styled.div`
 
 const Type = styled.div`
   margin-right: 1.5rem;
-  
+
   @media (max-width: 850px) {
     margin-right: 0;
     h1 {
       font-size: 1.6rem;
       line-height: 1.6rem;
     }
+
     p {
       font-size: 1rem;
     }
