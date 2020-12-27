@@ -19,11 +19,11 @@ const Contact = () => {
                 <H1>Let's Talk.</H1>
                 <form onSubmit={submitHandler}>
                     <Label for="_name">Name</Label>
-                    <Input type="text" id="_name" required/>
+                    <Input type="text" id="_name" required placeholder="Your full name"/>
                     <Label for="_email">Email</Label>
-                    <Input type="email" id="_email" required/>
+                    <Input type="email" id="_email" required placeholder="Your email"/>
                     <Label for="_message">Message</Label>
-                    <Textarea id="_message" rows='3' required/>
+                    <Textarea id="_message" rows='3' required placeholder="Sending message is currently disabled."/>
                     <Button type="submit">SEND</Button>
                 </form>
             </FormContainer>
@@ -43,6 +43,7 @@ const Container = styled("div")`
   @media (max-width: 700px) {
     flex-direction: column-reverse;
     margin-top: 2rem;
+
     
     & div {
       width: 100%;
