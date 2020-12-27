@@ -4,17 +4,27 @@ import styled from "styled-components";
 import Header from "./comonents/Header";
 import Hero from "./comonents/Hero";
 import Bars from "./comonents/Bars";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Contact from "./comonents/Contact";
 
 function App() {
     return (
-        <div className="App">
-            <StyledContainer>
-                <Header/>
-                <Hero/>
-                <Bars/>
-            </StyledContainer>
-
-        </div>
+        <Router>
+            <div className="App">
+                <StyledContainer>
+                    <Header/>
+                    <Switch>
+                        <Route path="/" exact>
+                            <Hero/>
+                        </Route>
+                        <Route path="/contact">
+                            <Contact/>
+                        </Route>
+                    </Switch>
+                    <Bars/>
+                </StyledContainer>
+            </div>
+        </Router>
     );
 }
 
