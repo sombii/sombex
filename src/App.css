@@ -28,6 +28,6 @@ a, a:visited, a:focus {
     height: 100vh;
 }
 
-.active {
+a.active {
     color: white;
 }

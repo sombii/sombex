@@ -30,9 +30,9 @@ const MainLogo = styled.img`
   width: 7rem;
 `
 
-const NavItem = styled(Link)`
+const NavItem = styled(NavLink)`
   margin-left: 2rem;
-
+  
 `
 
 export default Header;

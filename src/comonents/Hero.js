@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 const Hero = () => {
     return (
@@ -9,7 +10,7 @@ const Hero = () => {
                 <Para>New to market but full of positivity and creative attitude. We design and develop web apps with
                     passion and for fun.
                 </Para>
-                <CtaBtn href="/contact">CONTACT</CtaBtn>
+                <CtaBtn to="/contact">CONTACT</CtaBtn>
                 <SecBtn href="/contact">BLOG<OutIcon src="assets/img/out.svg"/> </SecBtn>
             </Type>
             <HeroImg src="assets/img/hero.svg"/>
@@ -60,7 +61,7 @@ const HeroImg = styled.img`
   margin-left: 1.5rem;
 `
 
-const CtaBtn = styled.a`
+const CtaBtn = styled(Link)`
   padding: 0.7rem 1rem;
   background-color: #2de3c5;
   color: #2d3331 !important;

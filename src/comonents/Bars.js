@@ -32,7 +32,7 @@ const Bar = styled.div`
   min-width: 15rem;
   width: 40%;
   height: 0;
-  border-top: 1px solid #b8bbb6;
+  border-top: 1px solid #707070;
   margin-top: 2rem;
 `
 
