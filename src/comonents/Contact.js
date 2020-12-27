@@ -39,6 +39,16 @@ const Container = styled("div")`
   width: 100%;
   //height: 100%;
   display: flex;
+
+  @media (max-width: 700px) {
+    flex-direction: column-reverse;
+    
+    & div {
+      width: 100%;
+      border: none;
+      padding: 0;
+    }
+  }
 `
 
 const TypeContainer = styled('div')`
@@ -67,6 +77,9 @@ const Email = styled('a')`
 const FormContainer = styled('div')`
   padding-left: 2rem;
   width: 50%;
+  @media (max-width: 700px) {
+    margin-bottom: 2rem;
+  }
 `
 
 const Label = styled('label')`

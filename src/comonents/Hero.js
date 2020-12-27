@@ -27,6 +27,11 @@ const HeroWrapper = styled.div`
 
   @media (max-width: 850px) {
     flex-direction: column-reverse;
+    text-align: center;
+    
+    img{
+      margin: 0;
+    }
   }
 `
 
@@ -37,6 +42,10 @@ const Type = styled.div`
     margin-right: 0;
     h1 {
       font-size: 1.6rem;
+      line-height: 1.6rem;
+    }
+    p {
+      font-size: 1rem;
     }
   }
 `
