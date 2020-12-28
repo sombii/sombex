@@ -48,9 +48,11 @@ const HeroWrapper = styled(motion.div)`
 
 const Type = styled.div`
   margin-right: 1.5rem;
-
+  width: 50%;
+  
   @media (max-width: 850px) {
     margin-right: 0;
+    width: 100%;
     h1 {
       font-size: 1.6rem;
       line-height: 1.6rem;
@@ -78,13 +80,14 @@ const Para = styled.p`
 `
 
 const HeroImg = styled.img`
+  width: 50%;
   max-width: 25rem;
   margin-left: 1.5rem;
 `
 
 const CtaBtn = styled(Link)`
   padding: 0.7rem 1rem;
-  background-color: #2de3c5;
+  background-color: #5ca08e;
   color: #2d3331 !important;
   font-weight: bold;
   vertical-align: middle;

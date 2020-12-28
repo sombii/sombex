@@ -123,7 +123,7 @@ const Input = styled('input')`
 `
 
 const Button = styled('button')`
-  background-color: #2de3c5;
+  background-color: #5ca08e;
   color: #2d3331;
   outline: none;
   border: none;
